@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Activity 1 Score
+</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg"></canvas>
+
+<div id="gate">
+  <div class="envelope" id="envelope">
+    <div class="flap"></div>
+    <div class="seal">💜</div>
+  </div>
+  <h1>Babu…</h1>
+  <p class="sub">I made something just for you</p>
+  <button id="openBtn">Tap to open 💌</button>
+</div>
+
+<audio id="song" src="palagi.mp3" loop preload="auto"></audio>
+<button id="music" title="Music">🎵</button>
+
+<main>
+  <section class="reveal hero">
+    <p class="script big">Happy Monthsary</p>
+    <h1>1 Year &amp; 7 Months</h1>
+    <p class="sub script big">Every month with you is my favorite month 💜</p>
+    <div id="counter">
+      <div><b id="cd">0</b><small>days</small></div>
+      <div><b id="ch">0</b><small>hours</small></div>
+      <div><b id="cm">0</b><small>minutes</small></div>
+      <div><b id="cs">0</b><small>seconds</small></div>
+    </div>
+    <p class="sub">of loving you, Babu</p>
+  </section>
+
+  <section class="reveal">
+    <h2>A bouquet for you</h2>
+    <svg class="bouquet" id="bouquet" viewBox="0 0 300 350">
+      <defs>
+        <symbol id="tulip" viewBox="-20 -36 40 46" overflow="visible">
+          <path d="M-15,-30 C-19,-8 -9,8 0,8 C9,8 19,-8 15,-30 L7,-19 L0,-34 L-7,-19 Z" fill="currentColor"/>
+          <path d="M0,-34 C-6,-15 -4,0 0,8 C4,0 6,-15 0,-34Z" fill="#fff" opacity=".18"/>
+        </symbol>
+        <g id="bloom">
+          <g fill="#f9a8d4">
+            <circle cx="0" cy="-10" r="8"/><circle cx="9.5" cy="-3" r="8"/><circle cx="6" cy="8" r="8"/>
+            <circle cx="-6" cy="8" r="8"/><circle cx="-9.5" cy="-3" r="8"/>
+          </g>
+          <circle r="6" fill="#fde68a"/>
+        </g>
+      </defs>
+      <g stroke="#4ade80" stroke-width="5" fill="none" stroke-linecap="round">
+        <path d="M150,300 C150,200 150,140 150,90"/>
+        <path d="M150,300 C130,220 105,170 95,120"/>
+        <path d="M150,300 C170,220 195,170 205,120"/>
+        <path d="M150,300 C120,240 80,200 60,165"/>
+        <path d="M150,300 C180,240 220,200 240,165"/>
+        <path d="M150,300 C140,250 128,215 122,170" stroke="#22c55e"/>
+        <path d="M150,300 C160,250 172,215 178,170" stroke="#22c55e"/>
+      </g>
+      <use class="t" href="#tulip" x="115" y="35" width="70" height="80" style="color:#a855f7;--d:.1s"/>
+      <use class="t" href="#tulip" x="60" y="70" width="70" height="80" style="color:#c084fc;--d:.3s"/>
+      <use class="t" href="#tulip" x="170" y="70" width="70" height="80" style="color:#9333ea;--d:.5s"/>
+      <use class="t" href="#tulip" x="25" y="115" width="70" height="80" style="color:#f472b6;--d:.7s"/>
+      <use class="t" href="#tulip" x="205" y="115" width="70" height="80" style="color:#ec4899;--d:.9s"/>
+      <use class="t" href="#bloom" x="122" y="165" style="--d:1.1s"/>
+      <use class="t" href="#bloom" x="178" y="165" style="--d:1.3s"/>
+      <path d="M85,235 L215,235 L170,335 L130,335 Z" fill="#f9a8d4" opacity=".95"/>
+      <path d="M85,235 L150,265 L215,235" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2"/>
+      <path d="M150,262 L128,248 L128,276 Z M150,262 L172,248 L172,276 Z" fill="#a855f7"/>
+      <circle cx="150" cy="262" r="7" fill="#7e22ce"/>
+    </svg>
+    <p class="sub" id="flowerMsg">Tap the flowers 🌷</p>
+  </section>
+
+  <section class="reveal">
+    <h2>Our Story 💞</h2>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <section class="reveal">
+    <h2>Our Pictures 📸</h2>
+    <div class="grid" id="photos"></div>
+  </section>
+
+  <section class="reveal">
+    <h2>Our Mukbang Together</h2>
+    <div class="grid" id="videos"></div>
+  </section>
+
+  <section class="reveal">
+    <h2>Letters for you 💌</h2>
+    <p class="sub">Tap an envelope to open it</p>
+    <div class="letters" id="letterBtns"></div>
+  </section>
+
+  <section class="reveal final">
+    <h2>One last question…</h2>
+    <p class="script big" id="askText">Will you be my Babu forever?</p>
+    <button id="yes">Yes 💜</button>
+    <button id="no">No</button>
+  </section>
+
+  <footer class="script big">Forever yours, Babu 💜</footer>
+</main>
+
+<div id="modal">
+  <div class="paper">
+    <div id="letter"></div>
+    <button id="closeLetter">Close 💜</button>
+  </div>
+</div>
+
+<div id="lightbox"><img alt=""></div>
+
+<script src="script.js"></script>
+</body>
+</html>
